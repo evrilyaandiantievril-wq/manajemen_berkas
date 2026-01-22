@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard Berkas Pertek</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container py-4">
+    <header class="d-flex align-items-center mb-4">
+      <div>
+        <h1 class="h3 mb-0">Dashboard Berkas Pertek</h1>
+        <p class="text-muted mb-0">Kelola dan cari berkas pertek dengan cepat — pencarian real-time seperti Google.</p>
+      </div>
+    </header>
+
+    <div class="mb-3 position-relative">
+      <input id="searchBox" class="form-control form-control-lg" type="search" placeholder="Cari nomor, perusahaan, desa, kecamatan, peruntukan..." aria-label="Cari">
+      <ul id="suggestions" class="list-group position-absolute"></ul>
+    </div>
+
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+      <div>
+        <small class="text-muted" id="stats">Menampilkan ...</small>
+      </div>
+      <div>
+        <select id="limitSelect" class="form-select form-select-sm">
+          <option value="5">5 / halaman</option>
+          <option value="10" selected>10 / halaman</option>
+          <option value="25">25 / halaman</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="table-responsive shadow-sm rounded">
+      <table class="table table-hover table-striped mb-0" id="resultsTable">
+        <thead class="table-primary">
+          <tr>
+            <th>No</th>
+            <th>Nomor</th>
+            <th>Tanggal Direktur</th>
+            <th>Perusahaan</th>
+            <th>Desa</th>
+            <th>Kecamatan</th>
+            <th>Luas (ha)</th>
+            <th>Peruntukan</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody">
+          <!-- rows -->
+        </tbody>
+      </table>
+    </div>
+
+    <nav class="mt-3">
+      <ul id="pagination" class="pagination justify-content-center"></ul>
+    </nav>
+
+    <footer class="mt-4 text-center text-muted">
+      <small>Contoh sederhana — Anda bisa menambahkan fitur edit/hapus, upload file, autentikasi, export CSV, dan lain-lain.</small>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
