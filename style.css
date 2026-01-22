@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(180deg, #f6f9ff 0%, #ffffff 100%);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* suggestion box */
+#suggestions {
+  top: 56px;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  max-height: 240px;
+  overflow: auto;
+  display: none;
+}
+
+#suggestions .list-group-item {
+  cursor: pointer;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* highlight matched text */
+.highlight { background: #fffb91; padding: 0 2px; border-radius: 2px; }
